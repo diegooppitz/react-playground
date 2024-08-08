@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.container select {
+  padding: 10px;
+  font-size: 16px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.container button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.container button:hover {
+  background-color: #0056b3;
+}

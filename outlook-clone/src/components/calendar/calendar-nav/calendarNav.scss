@@ -1,0 +1,48 @@
+@import '@/sass/globals.scss';
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: $white-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", "Arial", sans-serif;
+
+  .calendar-nav-controls {
+    display: flex;
+    gap: 20px;
+
+    .calendar-nav-today-button,
+    .calendar-nav-navigation-button,
+    .calendar-nav-dropdown-button {
+      background-color: initial;
+      color: $neutral-primary;
+      padding: 5px 10px;
+      cursor: pointer;
+      user-select: none;
+      border-radius: 2px;
+      margin: 0 2px;
+
+      &:hover {
+        background-color: $light-gray;
+      }
+    }
+
+    .calendar-nav-today-button {
+      border: 1px solid $light-gray;
+      background-color: $white-color;
+      padding: 7px 15px;
+    }
+  }
+
+  .calendar-nav-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .calendar-nav-date-range {
+    font-weight: bold;
+    margin: 0 5px;
+  }
+}

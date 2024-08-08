@@ -1,0 +1,141 @@
+.container {
+  margin: 30px auto 0;
+  height: 85vh;
+  width: 60%;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+}
+
+.gameImg {
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20px;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
+.blurredImg3 {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+.blurredImg5 {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+.blurredImg7 {
+  filter: blur(7px);
+  -webkit-filter: blur(7px);
+}
+
+.gameInfos {
+  padding-bottom: 30px;
+  text-align: center;
+  width: 600px;
+  margin: 20px auto 0;
+}
+
+.gameInfo {
+  font-weight: 700;
+}
+
+.gameInfo span {
+  font-weight: 400;
+}
+
+.nextGame {
+  background-color: #00f;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 16px;
+  opacity: .8;
+  width: 30%;
+  height: 40px;
+}
+
+.gameLink {
+  color: #0000cd;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.guessOptions {
+  margin: 20px auto 0;
+  width: 600px;
+  padding-bottom: 130px;
+}
+
+.guessInput {
+  padding-left: 15px;
+  font-size: 16px;
+  height: 40px;
+  width: 70%;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+}
+
+.guessSuggestions {
+  min-height: 100px;
+  max-height: 150px;
+  width: 70%;
+  height: auto;
+  overflow: auto;
+  border: solid 1px #ccc;
+  background-color: #fff;
+}
+
+.suggestionItem {
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.suggestionItem:hover {
+  background-color: #eee;
+}
+
+.guessBtn {
+  background-color: #00f;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 16px;
+  opacity: .8;
+  width: 30%;
+  height: 40px;
+}
+
+.guessBtn:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .guessOptions {
+    width: 100%;
+  }
+
+  .guessInput {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .guessBtn {
+    width: 100%;
+    display: block;
+  }
+}
+
+

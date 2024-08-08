@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0078d4;
+  color: #fff;
+
+  .logoSection {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .logoSection {
+    h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+  }
+  
+  .navSection {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .navButton {
+    background: none;
+    border: 1px solid #fff;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .navButton {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+  
+  .newEvent {
+    background-color: #fff;
+    color: #0078d4;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .newEvent {
+    &:hover {
+      background-color: #e5e5e5;
+    }
+  }
+}

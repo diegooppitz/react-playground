@@ -1,0 +1,35 @@
+.sideBar {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    padding-top: 24px;
+    width: 241px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+.sb__logoLink {
+    padding: 0 24px;
+}
+
+.sb__menuOptions {
+    margin-top: 30px;
+    padding: 0 24px;
+}
+
+.sb__menuOptions li {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.sb__menuOptions li:last-child {
+    padding-left: 3px;
+}
+
+.sb__menuOptions p {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 14px;
+}

@@ -1,0 +1,54 @@
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-notion {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+
+  img {
+    display: block;
+    object-fit: cover;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    transition: opacity 100ms ease-out 0s;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 0;
+    padding-left: 10px;
+    color: #ffffffcf;
+  }
+}
+
+.menu,
+.pages {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  padding: 5px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  color: #9b9b9b;
+  transition: background-color 0.3s;
+
+  p {
+    padding-left: 10px;
+    margin: 0;
+  }
+}
+
+.menuItem:hover {
+  background-color: #444;
+}

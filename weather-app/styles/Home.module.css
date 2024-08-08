@@ -1,0 +1,158 @@
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.appTitle {
+  font-size: 48px;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.container .form {
+  position: relative;
+  display: flex;
+  margin: 0 0 50px 15px;
+}
+
+.container input {
+  font-size: 30px;
+  height: 40px;
+  padding: 5px 5px 10px;
+  border-bottom: 1px solid;
+}
+
+.container button {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 15px 30px;
+  height: 50px;
+  margin-top: 6px;
+  margin-left: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff1e42;
+}
+
+.container button:hover {
+  opacity: 0.8;
+}
+
+.container input::placeholder {
+  color: #fff;
+}
+
+.citiesContainer {
+  display: flex;
+  width: auto;
+  overflow-x: auto;
+}
+
+.cityCard {
+  background-color: #fff;
+  margin: 0 10px;
+  height: 366px;
+  min-width: 270px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cityCard h3,
+.cityCard p {
+  margin: 0;
+  padding: 0;
+}
+
+.cityCard h3 {
+  color: #53627c;
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+.cityCard .tempText {
+  position: relative;
+  color: #1e2432;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.cityCard span {
+  position: absolute;
+  color: #1e2432;
+  top: 10px;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.cityCard img {
+  max-width: 50%;
+  margin-left: -15px;
+  margin-bottom: 30px;
+}
+
+.cityCard .condText {
+  color: #53627c;
+  text-transform: uppercase;
+  max-width: 150px;
+  width: auto;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+}
+
+.closeIcon {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .appTitle {
+    font-size: 34px
+  }
+
+  .container input {
+    font-size: 20px;
+  }
+
+  .container .form {
+    flex-direction: column;
+    margin: 0 15px 40px 15px;
+  }
+
+  .container input {
+    padding: 5px;
+  }
+
+  .container button {
+    margin-left: 0;
+    margin-top: 10px
+  }
+  .citiesContainer {
+    margin: 0 15px;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .cityCard {
+    min-width: 100%;
+    padding: 30px;
+    margin: 0;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .cityCard:first-child {
+    margin: 0;
+  }
+}
