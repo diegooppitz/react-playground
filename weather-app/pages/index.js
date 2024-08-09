@@ -30,8 +30,9 @@ export default function Home({ data }) {
   function configCity() {
     const citiesLocalStorage = JSON.parse(localStorage.getItem('citiesArray')) ?? [];
 
-    if (data?.error) toast.error("Ops, something went wrong!", toastConfig);
-    else if (data && checkHaveCity({ city: data, cities: citiesLocalStorage })) toast.error("City already registered!",  toastConfig);
+
+    if (data?.error) toast.error(data.error, toastConfig);
+    else if (data && checkHaveCity({ city: data, cities: citiesLocalStorage })) toast.error("City already registered!", toastConfig);
     else {
       citiesLocalStorage.splice(0, 0, data);
       localStorage.setItem('citiesArray', JSON.stringify(citiesLocalStorage));
@@ -47,6 +48,7 @@ export default function Home({ data }) {
 
   function pushRoute() {
     if (citySearch) routerPush({ citySearch })
+    else toast.error('Invalid Search Value', toastConfig);
   }
 
   useEffect(() => {
@@ -97,18 +99,26 @@ export default function Home({ data }) {
   );
 }
 
-export async function getServerSideProps(context) {
-  const { query } = context;
+export async function getServerSideProps({ query }) {
   const city = query?.city;
   let responseData = null;
 
   if (city) {
-    const externalResponse = await fetch(
-      `${api_url}?key=${api_key} &q=${city}&aqi=no`
-    );
-    responseData = await externalResponse.json();
+    try {
+      const externalResponse = await fetch(`${api_url}&q=${city}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-    responseData = responseData && !responseData.error ? responseData : { error: true }
+      const data = await externalResponse.json();
+
+      responseData = data.error ? { error: data.error.message } : data;
+
+    } catch (error) {
+      responseData = { error: error.message || "An unexpected error occurred" };
+    }
   }
 
   return {
